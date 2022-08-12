@@ -1,0 +1,25 @@
+<div class="container-fluid px-1 py-5 mx-auto">
+  <div class="row d-flex justify-content-center">
+      <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+          <div class="card">
+              <h5 class="text-center mb-4">Add new product</h5>
+              <form class="form-card"[formGroup]="form"  (ngSubmit)="submit()">
+                  <div class="row justify-content-between text-left">
+                      <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Name<span class="text-danger"> *</span></label> <input type="text" id="fname" name="name" formControlName="name" placeholder="Enter  name" > </div>
+                      <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Price<span class="text-danger"> *</span></label> <input type="number" id="lname" name="price" formControlName="price" placeholder="Enter price"  > </div>
+                  </div>
+                  <div class="row justify-content-between text-left">
+                      <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Image URL<span class="text-danger"> *</span></label> <input type="url" id="job" name="url" formControlName="image" placeholder="" > </div>
+                  </div>
+                  <div class="row justify-content-between text-left">
+                      <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">Description<span class="text-danger"> *</span></label> <input type="text" id="ans" name="description" formControlName="description" placeholder="" > </div>
+                  </div>
+                  <div class="row justify-content-between text-left">
+                    <div class="form-group col-sm-6"> <s-button routerLink="/" type="warning" label="Cancel"></s-button> </div>
+                      <div class="form-group col-sm-6"> <button type="submit" class="btn btn-primary">Add product</button>  </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

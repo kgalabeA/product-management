@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-body">
+    <img [src]="product.image" class="img-fluid" alt="Responsive image">
+    <h5 class="card-title">{{product.name}}</h5>
+    <p class="card-text">{{product.description}}</p>
+    <p class="card-text">Price: {{product.price | currency}}</p>
+  </div>
+</div>
+<div class="row">
+ <div class="col-sm-4">
+  <button type="button" routerLink="/" class="btn btn-outline-warning btn-block">Done</button>
+ </div>
+ <div class="col-sm-4">
+  <button type="button" routerLink="/edit" class="btn btn-primary">Edit</button>
+ </div>
+ <div class="col-sm-4">
+  <button type="button" routerLink="/" class="btn btn-danger">Delete</button>
+ </div>
+</div>

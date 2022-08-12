@@ -1,0 +1,28 @@
+
+<h3>Product list</h3>
+<div class="row">
+  <div class="col-sm-3" *ngFor="let item of products; trackBy:trackByFn">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="item.image" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">{{item.description}}</p>
+      <p class="card-text">Price : {{item.price | currency}}</p>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <s-button type="success" label="View" (click)="view(item)"></s-button>
+        </div>
+        <div class="col-sm-3">
+        <s-button type="primary" label="Edit" (click)="edit(item)"></s-button>
+        </div>
+        <div class="col-sm-3">
+        <s-button type="danger" label="Delete" (click)="onDelete(item.id)"></s-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
